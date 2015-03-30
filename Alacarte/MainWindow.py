@@ -224,8 +224,8 @@ class MainWindow(object):
                 assert False, 'should not be reached'
 
             name = cgi.escape(name)
-            if not show:
-                name = "<small><i>%s</i></small>" % (name,)
+            #if not show:
+            #    name = "<small><i>%s</i></small>" % (name,)
 
             self.item_store.append((show, icon, name, item))
 
