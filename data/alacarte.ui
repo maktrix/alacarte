@@ -52,7 +52,7 @@
     <property name="default_width">675</property>
     <property name="default_height">530</property>
     <property name="visible">True</property>
-    <property name="title" translatable="yes">Main Menu</property>
+    <property name="title" translatable="yes">Menu Editor</property>
     <property name="type">GTK_WINDOW_TOPLEVEL</property>
     <property name="window_position">GTK_WIN_POS_CENTER</property>
     <property name="modal">False</property>
@@ -230,145 +230,143 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkVBox" id="vbox6">
-                                <property name="visible">True</property>
-                                <property name="homogeneous">False</property>
-                                <property name="spacing">6</property>
-                                <child>
-                                  <object class="GtkVButtonBox" id="vbuttonbox1">
-                                    <property name="visible">True</property>
-                                    <property name="layout_style">GTK_BUTTONBOX_START</property>
-                                    <property name="spacing">6</property>
-                                    <child>
-                                      <object class="GtkButton" id="new_menu_button">
-                                        <property name="label" translatable="yes">_New Menu</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_default">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="relief">GTK_RELIEF_NORMAL</property>
-                                        <property name="focus_on_click">True</property>
-                                        <property name="image">new_menu_image</property>
-                                        <signal handler="on_new_menu_button_clicked" name="clicked"/>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkButton" id="new_item_button">
-                                        <property name="label" translatable="yes">Ne_w Item</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_default">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="relief">GTK_RELIEF_NORMAL</property>
-                                        <property name="focus_on_click">True</property>
-                                        <property name="image">new_item_image</property>
-                                        <signal handler="on_new_item_button_clicked" name="clicked"/>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkButton" id="new_separator_button">
-                                        <property name="visible">True</property>
-                                        <property name="can_default">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="label" translatable="yes">New _Separator</property>
-                                        <property name="use_underline">True</property>
-                                        <property name="relief">GTK_RELIEF_NORMAL</property>
-                                        <property name="focus_on_click">True</property>
-                                        <signal handler="on_new_separator_button_clicked" name="clicked"/>
-                                      </object>
-                                    </child>
-                                  </object>
-                                  <packing>
-                                    <property name="padding">0</property>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkAlignment" id="alignment12">
-                                    <property name="visible">True</property>
-                                    <property name="xalign">0.5</property>
-                                    <property name="yalign">0.5</property>
-                                    <property name="xscale">1</property>
-                                    <property name="yscale">1</property>
-                                    <property name="top_padding">12</property>
-                                    <property name="bottom_padding">0</property>
-                                    <property name="left_padding">0</property>
-                                    <property name="right_padding">0</property>
-                                    <child>
-                                      <object class="GtkVButtonBox" id="vbuttonbox2">
-                                        <property name="visible">True</property>
-                                        <property name="layout_style">GTK_BUTTONBOX_START</property>
-                                        <property name="spacing">6</property>
-                                        <child>
-                                          <object class="GtkButton" id="move_up_button">
-                                            <property name="label" translatable="yes">Move Up</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_default">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="relief">GTK_RELIEF_NORMAL</property>
-                                            <property name="focus_on_click">True</property>
-                                            <property name="image">move_up_image</property>
-                                            <signal handler="on_move_up_button_clicked" name="clicked"/>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton" id="move_down_button">
-                                            <property name="label" translatable="yes">Move Down</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_default">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="relief">GTK_RELIEF_NORMAL</property>
-                                            <property name="focus_on_click">True</property>
-                                            <property name="image">move_down_image</property>
-                                            <signal handler="on_move_down_button_clicked" name="clicked"/>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton" id="delete_button">
-                                            <property name="label" translatable="no">gtk-delete</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="receives_default">True</property>
-                                            <property name="use_stock">True</property>
-					    <signal handler="on_delete_button_clicked" name="clicked"/>
-                                          </object>
-                                          <packing>
-                                            <property name="expand">False</property>
-                                            <property name="fill">False</property>
-                                            <property name="position">2</property>
-                                          </packing>
-					</child>
-                                        <child>
-                                          <object class="GtkButton" id="properties_button">
-                                            <property name="label" translatable="no">gtk-properties</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="receives_default">True</property>
-                                            <property name="use_stock">True</property>
-					    <signal handler="on_properties_button_clicked" name="clicked"/>
-                                          </object>
-                                          <packing>
-                                            <property name="expand">False</property>
-                                            <property name="fill">False</property>
-                                            <property name="position">3</property>
-                                          </packing>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                  <packing>
-                                    <property name="padding">0</property>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="padding">0</property>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                              </packing>
+							  <object class="GtkVBox" id="vbuttonbox1">
+								<property name="visible">True</property>
+								<property name="spacing">6</property>
+								<child>
+								  <object class="GtkButton" id="new_menu_button">
+									<property name="label" translatable="yes">_New Menu</property>
+									<property name="use_underline">True</property>
+									<property name="visible">True</property>
+									<property name="can_default">True</property>
+									<property name="can_focus">True</property>
+									<property name="relief">GTK_RELIEF_NORMAL</property>
+									<property name="focus_on_click">True</property>
+									<property name="image">new_menu_image</property>
+									<signal handler="on_new_menu_button_clicked" name="clicked"/>
+								  </object>
+									  <packing>
+										<property name="expand">False</property>
+										<property name="fill">False</property>
+										<property name="position">0</property>
+									  </packing>
+								</child>
+								<child>
+								  <object class="GtkButton" id="new_item_button">
+									<property name="label" translatable="yes">Ne_w Item</property>
+									<property name="use_underline">True</property>
+									<property name="visible">True</property>
+									<property name="can_default">True</property>
+									<property name="can_focus">True</property>
+									<property name="relief">GTK_RELIEF_NORMAL</property>
+									<property name="focus_on_click">True</property>
+									<property name="image">new_item_image</property>
+									<signal handler="on_new_item_button_clicked" name="clicked"/>
+								  </object>
+									  <packing>
+										<property name="expand">False</property>
+										<property name="fill">False</property>
+										<property name="position">1</property>
+									  </packing>
+								</child>
+								<child>
+								  <object class="GtkButton" id="new_separator_button">
+									<property name="visible">True</property>
+									<property name="can_default">True</property>
+									<property name="can_focus">True</property>
+									<property name="label" translatable="yes">New _Separator</property>
+									<property name="use_underline">True</property>
+									<property name="relief">GTK_RELIEF_NORMAL</property>
+									<property name="focus_on_click">True</property>
+									<signal handler="on_new_separator_button_clicked" name="clicked"/>
+								  </object>
+									  <packing>
+										<property name="expand">False</property>
+										<property name="fill">False</property>
+										<property name="position">2</property>
+									  </packing>
+								</child>
+								<child>
+								  <object class="GtkHBox" id="filler">
+									<property name="visible">True</property>
+								  </object>
+									  <packing>
+										<property name="expand">False</property>
+										<property name="fill">False</property>
+										<property name="position">3</property>
+										<property name="padding">12</property>
+									  </packing>
+								</child>
+								<child>
+								  <object class="GtkButton" id="move_up_button">
+									<property name="label" translatable="yes">Move Up</property>
+									<property name="visible">True</property>
+									<property name="can_default">True</property>
+									<property name="can_focus">True</property>
+									<property name="relief">GTK_RELIEF_NORMAL</property>
+									<property name="focus_on_click">True</property>
+									<property name="image">move_up_image</property>
+									<signal handler="on_move_up_button_clicked" name="clicked"/>
+								  </object>
+								  <packing>
+									<property name="expand">False</property>
+									<property name="fill">False</property>
+									<property name="position">4</property>
+								  </packing>
+								</child>
+								<child>
+								  <object class="GtkButton" id="move_down_button">
+									<property name="label" translatable="yes">Move Down</property>
+									<property name="visible">True</property>
+									<property name="can_default">True</property>
+									<property name="can_focus">True</property>
+									<property name="relief">GTK_RELIEF_NORMAL</property>
+									<property name="focus_on_click">True</property>
+									<property name="image">move_down_image</property>
+									<signal handler="on_move_down_button_clicked" name="clicked"/>
+								  </object>
+								  <packing>
+									<property name="expand">False</property>
+									<property name="fill">False</property>
+									<property name="position">5</property>
+								  </packing>
+								</child>
+								<child>
+								  <object class="GtkButton" id="delete_button">
+									<property name="label" translatable="no">gtk-delete</property>
+									<property name="visible">True</property>
+									<property name="can_focus">True</property>
+									<property name="receives_default">True</property>
+									<property name="use_stock">True</property>
+									<signal handler="on_delete_button_clicked" name="clicked"/>
+								  </object>
+								  <packing>
+									<property name="expand">False</property>
+									<property name="fill">False</property>
+									<property name="position">6</property>
+								  </packing>
+								</child>
+								<child>
+								  <object class="GtkButton" id="properties_button">
+									<property name="label" translatable="no">gtk-properties</property>
+									<property name="visible">True</property>
+									<property name="can_focus">True</property>
+									<property name="receives_default">True</property>
+									<property name="use_stock">True</property>
+									<signal handler="on_properties_button_clicked" name="clicked"/>
+								  </object>
+								  <packing>
+									<property name="expand">False</property>
+									<property name="fill">False</property>
+									<property name="position">7</property>
+								  </packing>
+								</child>
+							  </object>
+							  <packing>
+								<property name="padding">0</property>
+								<property name="expand">False</property>
+								<property name="fill">True</property>
+							  </packing>
                             </child>
                           </object>
                           <packing>
