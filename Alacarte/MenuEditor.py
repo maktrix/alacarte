@@ -180,6 +180,7 @@ class MenuEditor(object):
                 self.writeItem(item, NoDisplay=False)
             else:
                 self.addXmlFilename(menu_xml, dom, item.get_desktop_file_id(), 'Exclude')
+                self.writeItem(item, NoDisplay=True)
             self.addXmlTextElement(menu_xml, 'AppDir', util.getUserItemPath(), dom)
         elif isinstance(item, GMenu.TreeDirectory):
             item_iter = item.iter()
