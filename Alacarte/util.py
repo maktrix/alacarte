@@ -22,7 +22,7 @@ from collections import Sequence
 from gi.repository import Gtk, GdkPixbuf, GMenu, GLib
 
 # XXX: look into pygobject error marshalling
-from gi._glib import GError
+from gi.repository.GLib import GError
 
 DESKTOP_GROUP = GLib.KEY_FILE_DESKTOP_GROUP
 KEY_FILE_FLAGS = GLib.KeyFileFlags.KEEP_COMMENTS | GLib.KeyFileFlags.KEEP_TRANSLATIONS
