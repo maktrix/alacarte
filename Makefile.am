@@ -4,7 +4,10 @@ SUBDIRS = data po Alacarte
 
 CLEANFILES=
 
-bin_SCRIPTS = alacarte
+bin_SCRIPTS = \
+	alacarte \
+	gnome-desktop-item-edit
+
 CLEANFILES += alacarte
 
 DISTCLEANFILES = ChangeLog
