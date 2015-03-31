@@ -1,5 +1,5 @@
 [Desktop Entry]
-_Name=Menu Editor
+_Name=Main Menu Editor
 _Comment=Add or remove applications from the main menu
 Exec=alacarte
 Terminal=false

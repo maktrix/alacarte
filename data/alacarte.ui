@@ -52,7 +52,7 @@
     <property name="default_width">675</property>
     <property name="default_height">530</property>
     <property name="visible">True</property>
-    <property name="title" translatable="yes">Menu Editor</property>
+    <property name="title" translatable="yes">Main Menu Editor</property>
     <property name="type">GTK_WINDOW_TOPLEVEL</property>
     <property name="window_position">GTK_WIN_POS_CENTER</property>
     <property name="modal">False</property>
@@ -78,21 +78,8 @@
             <property name="visible">True</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
             <child>
-              <object class="GtkButton" id="help_button">
-                <property name="visible">True</property>
-                <property name="can_default">True</property>
-                <property name="can_focus">True</property>
-                <property name="label">gtk-help</property>
-                <property name="use_stock">True</property>
-                <property name="relief">GTK_RELIEF_NORMAL</property>
-                <property name="focus_on_click">True</property>
-                <signal handler="on_help_button_clicked" name="clicked"/>
-              </object>
-            </child>
-            <child>
               <object class="GtkButton" id="revert_button">
                 <property name="visible">True</property>
-                <property name="tooltip-text" translatable="yes">Restore the default menu layout</property>
                 <property name="can_default">True</property>
                 <property name="can_focus">True</property>
                 <property name="label">gtk-revert-to-saved</property>
@@ -400,7 +387,6 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-11">help_button</action-widget>
       <action-widget response="0">revert_button</action-widget>
       <action-widget response="-7">close_button</action-widget>
     </action-widgets>
