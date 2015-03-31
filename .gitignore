@@ -1,0 +1,14 @@
+*.o
+*.so
+*.la
+*.a
+*.gmo
+*.lo
+.dirstamp
+.DS_Store
+config.log
+.deps/
+.libs/
+libtool
+autom4te.cache/*
+
