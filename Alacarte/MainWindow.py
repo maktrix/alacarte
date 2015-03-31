@@ -204,7 +204,7 @@ class MainWindow(object):
         for menu, show in self.editor.getMenus(parent):
             name = cgi.escape(menu.get_name())
             if not show:
-                name = "<small><i>%s</i></small>" % (name,)
+                name = "<span foreground=\"grey\">%s</span>" % (name,)
 
             icon = util.getIcon(menu)
             iters[menu] = self.menu_store.append(iters[parent], (icon, name, menu))

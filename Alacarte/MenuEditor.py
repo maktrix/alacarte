@@ -186,8 +186,8 @@ class MenuEditor(object):
             item_iter = item.iter()
             first_child_type = item_iter.next()
             #don't mess with it if it's empty
-            if first_child_type == GMenu.TreeItemType.INVALID:
-                return
+            #if first_child_type == GMenu.TreeItemType.INVALID:
+            #    return
             menu_xml = self.getXmlMenu(self.getPath(item), dom.documentElement, dom)
             for node in self.getXmlNodesByName(['Deleted', 'NotDeleted'], menu_xml):
                 node.parentNode.removeChild(node)
@@ -402,7 +402,6 @@ class MenuEditor(object):
             file_id = util.getUniqueFileId(keyfile.get_string(GLib.KEY_FILE_DESKTOP_GROUP, 'Name'), '.desktop')
 
         contents, length = keyfile.to_data()
-
         f = open(os.path.join(util.getUserItemPath(), file_id), 'w')
         f.write(contents)
         f.close()
