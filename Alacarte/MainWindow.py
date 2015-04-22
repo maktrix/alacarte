@@ -466,6 +466,13 @@ class MainWindow(object):
     def on_close_button_clicked(self, button):
         self.quit()
 
+    def on_cancel_button_clicked(self, button):
+        self.editor.revert()
+        self.quit()
+
+    def on_ok_button_clicked(self, button):
+        self.quit()
+
     def on_properties_button_clicked(self, button):
         self.on_edit_properties_activate(None)
     def on_delete_button_clicked(self, button):

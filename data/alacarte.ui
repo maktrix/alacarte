@@ -65,8 +65,8 @@
     <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
     <property name="focus_on_map">True</property>
     <property name="urgency_hint">False</property>
-    <signal handler="on_close_button_clicked" name="close"/>
-    <signal handler="on_close_button_clicked" name="destroy"/>
+    <signal handler="on_ok_button_clicked" name="close"/>
+    <signal handler="on_ok_button_clicked" name="destroy"/>
     <accelerator key="Escape" modifiers="0" signal="close"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox5">
@@ -82,11 +82,11 @@
                 <property name="visible">True</property>
                 <property name="can_default">True</property>
                 <property name="can_focus">True</property>
-                <property name="label">gtk-revert-to-saved</property>
+                <property name="label">gtk-cancel</property>
                 <property name="use_stock">True</property>
                 <property name="relief">GTK_RELIEF_NORMAL</property>
                 <property name="focus_on_click">True</property>
-                <signal handler="on_revert_button_clicked" name="clicked"/>
+                <signal handler="on_cancel_button_clicked" name="clicked"/>
               </object>
             </child>
             <child>
@@ -99,7 +99,7 @@
                 <property name="use_stock">True</property>
                 <property name="relief">GTK_RELIEF_NORMAL</property>
                 <property name="focus_on_click">True</property>
-                <signal handler="on_close_button_clicked" name="clicked"/>
+                <signal handler="on_ok_button_clicked" name="clicked"/>
               </object>
             </child>
           </object>
