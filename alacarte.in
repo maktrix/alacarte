@@ -21,6 +21,7 @@
 import sys
 sys.path.insert(1,'/usr/share/alacarte')
 sys.path.insert(1,'/usr/local/share/alacarte')
+sys.path.insert(1,'/usr/lib/python2.7/dist-packages')
 from Alacarte.MainWindow import MainWindow
 
 def main():

@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Main Menu Editor
 _Comment=Add or remove applications from the main menu
-Exec=alacarte
+Exec=python -S /usr/local/bin/alacarte
 Terminal=false
 Type=Application
 StartupNotify=true
