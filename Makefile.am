@@ -5,8 +5,7 @@ SUBDIRS = data po Alacarte
 CLEANFILES=
 
 bin_SCRIPTS = \
-	alacarte \
-	gnome-desktop-item-edit
+	alacarte
 
 CLEANFILES += alacarte
 
